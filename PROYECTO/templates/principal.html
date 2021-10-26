@@ -1,0 +1,12 @@
+{% extends 'comunes/base.html' %}
+{% block navbar %}
+    {{super()}}
+    {% include 'comunes/menu.html' %}
+{% endblock %}
+{% block contenido %}
+    {{super()}}
+
+        <button type="button" class="btn btn-success">Default</button>
+
+
+{% endblock %}
