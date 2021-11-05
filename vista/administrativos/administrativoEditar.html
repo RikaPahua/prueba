@@ -1,0 +1,43 @@
+{% extends 'comunes/index.html'%}
+    {% block contenido%}
+        <h1>DATOS E INFORMACIÓN DEL USUARIO</h1>
+        <form action="/administrativosDatosEdicion" method="post" class="row g-3">
+            <label for="idUsuario">idUsuario: </label>
+            <input type="number" name="idUsuario" id="idUsuario" value="1" disabled required/>
+            <br/><br/>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" value="Luz Maria Cruz Jiménez" maxlength="100" required/>
+            <br/><br/>
+            <div class="radio">
+                <label>Sexo: </label>
+                <input type="radio" name="sexo" id="H" value="H" />Hombre
+                <input type="radio" name="sexo" id="M" value="M" checked>Mujer
+                <br/><br/>
+            </div>
+            <label for="telefono">Teléfono: </label>
+            <input type="tel" name="telefono" id="telefono" value="351-112-4920" maxlength="12" size="12" required/>
+            <br/><br/>
+            <label for="domicilio">Domicilio: </label>
+            <input type="text" name="domicilio" id="domicilio" value="Hidalgo #12 Zamora Michoacán" maxlength="50" required/>
+            <br/><br/>
+            <div class="radio">
+                <label>Tipo: </label>
+                <input type="radio" name="tipo" id="administrador" value="A" />Administrador
+                <input type="radio" name="tipo" id="staff" value="S" checked>Staff Administrativo
+            </div>
+            <br/><br/>
+            <div class="radio">
+                <label>Estatus: </label>
+                <input type="radio" name="Estatus" id="A" value="A" checked/>Activo
+                <input type="radio" name="Estatus" id="I" value="I" >Inactivo
+                <br/><br/>
+            </div>
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" value="lmcruz123@vros.com" maxlength="50" required/>
+            <br/><br/>
+            <label for="clave">Contraseña: </label>
+            <input type="password" name="clave" id="clave" value="HOLA123!" maxlength="10" required/>
+            <br/><br/>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+{%endblock%}

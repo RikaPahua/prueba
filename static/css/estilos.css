@@ -1,0 +1,71 @@
+header {
+    background-color: #316796;
+}
+.encabezado{
+    display: flex;
+    padding-top: 15px;
+}
+#titulo{
+    font-size: 60px;
+    font-family: Georgia;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+main{
+    background-image: url('../img/fondo.jpeg');
+    background-size: cover;
+    height: 1200px;
+}
+h1{
+    color: black;
+    font-family: Georgia;
+    font-weight: 50px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.table th{
+    background-color: #316796;
+    text-transform:uppercase;
+    text-align: center;
+}
+.table{
+    background-color: white;
+    color:black;
+    width: 90%;
+    margin: auto;
+}
+.table td{
+    text-align: center;
+}
+#nuevo, #nuevo1, #nuevo2, #regresarAmaterias, #guardarCal, #selec, #selec2{
+    margin-left: 5%;
+}
+.row{
+    background-color: #316796;
+    color: white;
+    width: 55%;
+    margin: auto;
+    padding: 22px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#btn1,#btn2{
+    background-color: #316796;
+    border-color: white;
+   color: white;
+
+}
+#generarHorarios{
+    background-color: #316796;
+        color: white;
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+#generarHorarios h1, #titg{
+    color: white;
+}
