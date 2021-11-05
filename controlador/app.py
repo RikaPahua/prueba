@@ -1,6 +1,8 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
+from modelo.Dao import db,Usuarios
 app = Flask(__name__, template_folder='../vista',static_folder='../static')
-
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:holamundo@localhost/shopitesz'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 @app.route('/')
 def login():
     return render_template('comunes/login.html')
@@ -22,6 +24,10 @@ def administrativosListado():
 
 @app.route('/administrativosNuevo')
 def administrativosNuevo():
+    user=Usuarios()
+    user.nombre = request.form('nombre')
+    user.tipo = "Alumno"
+    user.agregar()
     return render_template('administrativos/administrativoNuevo.html')
 
 @app.route('/administrativosEditar')
@@ -132,5 +138,6 @@ def registrarInscripcion():
     return 'SE HA REALIZADO UNA INSCRIPCIÓN'
 
 
-if __name__ == '__main__':
+if __name__=='__main__':
+    db.init_app(app)#Inicializar la BD - pasar la configuración de la url de la BD
     app.run(debug=True)
